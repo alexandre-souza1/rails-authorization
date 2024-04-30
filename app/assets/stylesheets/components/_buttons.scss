@@ -1,3 +1,7 @@
+.button-container {
+  text-align: center;
+}
+
 .btn-flat {
   color: #D875C7;
   border: solid 1px #D875C7;
@@ -8,6 +12,21 @@
 }
 
 .btn-flat:hover {
+  background: #d85dc3;
+  color: white;
+}
+
+
+.btn-flat2 {
+  color: #aa6e62;
+  border: solid 1px #aa6e62;
+  padding: 8px 24px;
+  border-radius: 40px;
+  background: white;
+  transition: background 0.3s ease;
+}
+
+.btn-flat2:hover {
   background: #d85dc3;
   color: white;
 }

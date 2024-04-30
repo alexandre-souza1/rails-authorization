@@ -1,0 +1,117 @@
+.services-container {
+  text-align: center;
+  margin: 20px auto;
+  width: 100%;
+}
+
+.services-category {
+  color: #D875C7;
+  opacity: 0.6;
+}
+
+.services-title {
+  color: #D875C7;
+}
+
+.service-cards--grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-gap: 60px;
+  justify-items: center;
+  margin: auto 120px;
+  justify-content: center;
+}
+
+.service-cards {
+  position: relative;
+  width: 100%; /* Define a largura como 80% da largura da tela */
+  max-width: 518px; /* Define uma largura máxima para o card */
+  height: 40vh; /* Define a altura como 30% da altura da tela */
+  max-height: 400px; /* Define uma altura máxima para o card */
+}
+
+.service-card {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: all 1s ease;
+}
+
+.service-card:hover {
+  transform: rotateX(180deg);
+}
+
+.front-card {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background-color: #ffc728;
+}
+
+.front-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.back-card {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transform: rotateX(180deg);
+  background-color: rgb(255, 216, 208);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 35px;
+}
+
+.back-card h3, .back-card h6 {
+  color: #aa6e62;
+}
+
+/* Smallest device */
+@media (min-width: 100px) and (max-width: 575px) {
+  .service-cards {
+    margin: auto; /* Centralizar em telas pequenas */
+    grid-template-columns: 1fr;
+    grid-gap: 40px;
+  }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .service-cards {
+    margin: auto; /* Centralizar em telas pequenas */
+    grid-template-columns: 1fr;
+    grid-gap: 40px;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .service-cards {
+    margin: auto; /* Centralizar em telas médias */
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .service-cards {
+    margin: auto; /* Centralizar em telas grandes */
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .service-cards {
+    margin: auto; /* Centralizar em telas extra grandes */
+    grid-template-columns: 1fr 1fr;
+  }
+}
